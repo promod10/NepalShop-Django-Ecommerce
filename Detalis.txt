@@ -1,0 +1,14 @@
+Project Name = Nepal Shop
+App Name = shop
+
+Used in Project:-
+- HTML, CSS, JavaScript, Bootstrap5, Jquery, Ajax, FontAwesom, Owl Carousel, 
+- Python, Django, Paypal, Digital Ocean (Hosting)
+
+Topics Covered:-
+- Create Model, Model Property, Choice Field, Register Model Admin, Class Based View, Template Inheritance,
+- Using Template File, Static Files (CSS, JS, Image), DTL, Handling Json, Image Upload, Writting URL
+- Form, Model Form, Config Media, Config Email etc.
+
+
+

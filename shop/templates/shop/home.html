@@ -1,0 +1,92 @@
+{% extends 'shop/base.html' %} {% load static %} {% block title %}Home
+{% endblock title %} {% block banner_slider %}
+<!--Banner Slider-->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'shop/images/banner/banner1.jpg' %}" class="d-block w-100 mh-60" style="height: 600px;"
+        alt="banner1" />
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'shop/images/banner/banner2.jpg' %}" class="d-block w-100 mh-60" alt="banner2" />
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'shop/images/banner/banner3.jpg' %}" class="d-block w-100 mh-60" alt="banner3" />
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'shop/images/banner/banner4.jpg' %}" class="d-block w-100 mh-60" alt="banner4" />
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'shop/images/banner/banner5.jpg' %}" class="d-block w-100 mh-60" alt="banner5" />
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+<!-- End Banner Slider -->
+{% endblock banner_slider %}
+{% block main-content %}
+<!-- 1st Product Slider -->
+<div class="m-3">
+  <h2>Nepal Shop Ladies Wear</h2>
+  <!-- Slider 1 -->
+  <div class="owl-carousel" id="slider1">
+    {% for ld in ladies %}
+    <a href="{% url 'product-detail' ld.id %}" class="btn">
+      <div class="item">
+        <img src="{{ld.product_image.url}}" alt="" height="200px" />
+        <span class="fw-bold">{{ld.title}}</span>
+        <br />
+        <span class="fs-5">Rs. {{ld.selling_price}}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+<!-- End 1st Product Slider -->
+
+<!-- 2nd Product Slider -->
+<div class="mx-3">
+  <h2>Trending Deals</h2>
+  <!-- Slider 2 -->
+  <div class="owl-carousel" id="slider2">
+    {% for g in gents %}
+    <a href="{% url 'product-detail' g.id %}" class="btn">
+      <div class="item">
+        <img src="{{g.product_image.url}}" alt="" height="200px" />
+        <span class="fw-bold">{{g.title}}</span>
+        <br />
+        <span class="fs-5">Rs. {{g.selling_price}}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+<!-- End 2nd Product Slider -->
+<br>
+<!-- 3rd Product Slider -->
+<div class="mx-3">
+  <h2>Mobile Collections</h2>
+  <!-- Slider 2 -->
+  <div class="owl-carousel" id="slider3">
+    {% for m in mobiles %}
+    <a href="{% url 'product-detail' m.id %}" class="btn">
+      <div class="item">
+        <img src="{{m.product_image.url}}" alt="" height="200px" />
+        <span class="fw-bold">{{m.title}}</span>
+        <br />
+        <span class="fs-5">Rs. {{m.selling_price}}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+<!-- End 3rd Product Slider -->
+
+{% endblock main-content %}
