@@ -152,6 +152,22 @@ def mobile(request, data=None):
 
     return render(request, 'shop/mobile.html', {'mobiles': mobiles})
 
+def laptop(request, data=None):
+    if data == None:
+        laptops = Product.objects.filter(category='L')
+    elif data == 'DELL' or data == 'ACER' or data == 'ASUS' or data == 'HP' or data == 'MSI' or data == 'LENOVO':
+        laptops = Product.objects.filter(category='L').filter(brand=data)
+
+    return render(request, 'shop/laptop.html', {'laptops': laptops})
+
+def ladies(request, data=None):
+    if data == None:
+        ladies = Product.objects.filter(category='LD')
+    elif data == 'JEANS' or data == 'TOP' or data == 'SARI' or data == 'KURTHA' or data == 'GAUN' or data == 'VEST':
+        ladies = Product.objects.filter(category='LD').filter(brand=data)
+
+    return render(request, 'shop/ladies.html', {'ladies': ladies})
+
 
 class CustomerRegView(View):
     def get(self, request):

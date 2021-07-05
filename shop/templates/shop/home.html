@@ -4,8 +4,7 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'shop/images/banner/banner1.jpg' %}" class="d-block w-100 mh-60" style="height: 600px;"
-        alt="banner1" />
+      <img src="{% static 'shop/images/banner/banner1.jpg' %}" class="d-block w-100 mh-60" alt="banner1" />
     </div>
     <div class="carousel-item">
       <img src="{% static 'shop/images/banner/banner2.jpg' %}" class="d-block w-100 mh-60" alt="banner2" />
@@ -34,7 +33,7 @@
 {% block main-content %}
 <!-- 1st Product Slider -->
 <div class="m-3">
-  <h2>Nepal Shop Ladies Wear</h2>
+  <h2>Ladies Collections</h2>
   <!-- Slider 1 -->
   <div class="owl-carousel" id="slider1">
     {% for ld in ladies %}
@@ -53,7 +52,7 @@
 
 <!-- 2nd Product Slider -->
 <div class="mx-3">
-  <h2>Trending Deals</h2>
+  <h2>Jents Collection</h2>
   <!-- Slider 2 -->
   <div class="owl-carousel" id="slider2">
     {% for g in gents %}

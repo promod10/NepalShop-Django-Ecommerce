@@ -6,20 +6,26 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="list-group">
-                <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action" aria-current="true">ALL
-                    MOBILES</a>
-                <a href="{% url 'mobiledata' 'REDMI' %}" class="list-group-item list-group-item-action"
-                    aria-current="true">REDMI</a>
-                <a href="{% url 'mobiledata' 'SAMSUNG' %}" class="list-group-item list-group-item-action"
-                    aria-current="true">SAMSUNG</a>
-                <a href="{% url 'mobiledata' 'OPPO' %}" class="list-group-item list-group-item-action"
-                    aria-current="true">OPPO</a>
+                <a href="{% url 'laptop' %}" class="list-group-item list-group-item-action" aria-current="true">ALL
+                    LAPTOPS</a>
+                <a href="{% url 'laptopdata' 'DELL' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">DELL</a>
+                <a href="{% url 'laptopdata' 'ACER' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">ACER</a>
+                <a href="{% url 'laptopdata' 'ASUS' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">ASUS</a>
+                <a href="{% url 'laptopdata' 'HP' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">HP</a>
+                <a href="{% url 'laptopdata' 'MSI' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">MSI</a>
+                <a href="{% url 'laptopdata' 'LENOVO' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">LENOVO</a>
 
             </div>
         </div>
         <div class="col-sm-8">
             <div class="row">
-                {% for product in mobiles %}
+                {% for product in laptops %}
                 <div class="col-sm-4 text-center mb-4">
                     <a href="{% url 'product-detail' product.id %}" class="btn">
                         <div class="item">
